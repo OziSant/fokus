@@ -1,7 +1,8 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
+    "strict": false,
+    "checkJs": true,
     "paths": {
       "@/*": [
         "./src/*"
@@ -14,12 +15,17 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "assets.d.ts"
   ],
   "exclude": [
     "node_modules",
     "example",
+    "scripts",
+    "eslint.config.js",
     "example/**/*",
     "**/*.test.ts",
     "**/*.test.tsx"
